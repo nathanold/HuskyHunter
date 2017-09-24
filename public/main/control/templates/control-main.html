@@ -1,0 +1,9 @@
+<p>main control page</p>
+<input type="text"
+       class="form-control"
+       placeholder="Clue Number"
+       ng-model="number"/>
+<select ng-model="setNo" ng-options="x for x in sets"></select>
+<a ng-click="model.submitClue(number, setNo)"
+   class="btn btn-primary btn-block">
+    Submit Clue</a>
