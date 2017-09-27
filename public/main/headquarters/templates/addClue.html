@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+
+<h1>Add A Clue</h1>
+            <a href="#!/" class="btn btn-primary">Home</a>
+            <p></p><br>
+
+<!--Input Clue Number and choose which set it belongs to-->
+<p>
+    <input type="text"
+           class="form-control"
+           placeholder="Clue Number"
+           ng-model="number"/>
+    <br>
+<p>Which set of clues does this belong to?
+    <select ng-model="setNo" ng-options="x for x in sets">
+        <option value="A">A</option>
+        <option value="B">B</option>
+    </select> <br>
+</p>
+
+<br>
+
+<!--Input Information about the destination (name, location, etc...)-->
+<input type="text"
+       class="form-control"
+       placeholder="Name of Destination"
+       ng-model="locationName"/>
+<br>
+<b>[Google Maps Address API]</b>
+<br><br>
+<input type="text"
+       class="form-control"
+       placeholder="Additional Notes"
+       ng-model="additionalNotes"/>
+</p>
+
+<!--Button to submit clue to Database-->
+<a ng-click="model.submitClue(number, setNo)"
+   class="btn btn-primary">
+    Submit Clue</a>
+
+        </div>
+    </div>
+</div>

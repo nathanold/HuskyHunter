@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+<h1>Settings Panel</h1>
+<a href="#!/" class="btn btn-primary">Home</a>
+<br>
+<br>
+<!--Section for additional options that headquarters center will have to be able to do-->
+<p>
+<h4>Add New Set</h4> <br>
+A team has discovered a new set of questions.  Add the set Letter.
+<br> This will create a new option in the add clue drop down menu.
+<br> Teams will now be able to select this option. Doing this action will also
+<br> create a new folder on the photo server to store all the new photos
+<br> associated with this Set.
+<input type="text"
+       class="form-control"
+       placeholder="Enter new Clue Set Identifier"
+       ng-model="newClueID"/>
+<br>
+<a ng-click="model.submitIdentifier(number, setNo)"
+   class="btn btn-primary">
+    Submit Identifier</a>  <!--TODO: I named this "submitIdentifer" by i'm not sure if I should've --->
+</p>
+
+<h3>Other options to be added soon.</h3>
+<h4>List of things that belong here:</h4>
+            1. A Manual Upload Button (set name, path, photo, etc..)
+            <br>2. ...
+
+        </div>
+    </div>
+</div>
