@@ -3,7 +3,7 @@
         <div class="col-md-12">
 
 
-<h1>Add A Clue</h1>
+<h1>Add A New Clue</h1>
             <a href="#!/" class="btn btn-primary">Home</a>
             <p></p><br>
 
@@ -29,7 +29,11 @@
        placeholder="Name of Destination"
        ng-model="locationName"/>
 <br>
-<b>[Google Maps Address API]</b>
+<b>[Google Maps Address API]</b><br> <!-- store this in "mapData"--->
+ <input type="text"
+                   class="form-control"
+                   placeholder="Address"
+                   ng-model="mapData"/>
 <br><br>
 <input type="text"
        class="form-control"
@@ -38,7 +42,7 @@
 </p>
 
 <!--Button to submit clue to Database-->
-<a ng-click="model.submitClue(number, setNo, locationName, additionalNotes)"
+<a ng-click="model.submitClue(number, setNo, mapData, locationName, additionalNotes)"
    class="btn btn-primary">
     Submit Clue</a>
 

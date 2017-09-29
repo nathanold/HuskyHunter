@@ -26,5 +26,13 @@
                 controllerAs: 'model'
             })
 
+            .when('/submit', {
+                templateUrl: 'field/templates/submit.html',
+                controller: 'submitController',
+                controllerAs: 'model'
+            })
+
+
+
     }
 })();

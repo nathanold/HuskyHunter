@@ -7,10 +7,11 @@
         var model = this;
         model.sets = "OK";
 
-        model.submitClue = function(number, setNo, locationName, additionalNotes){
+        model.submitClue = function(number, setNo, mapData, locationName, additionalNotes){
             var clue = {
                 number: number,
                 setNo: setNo,
+                mapData: mapData,
                 locationName: locationName,
                 additionalNotes: additionalNotes
             };
