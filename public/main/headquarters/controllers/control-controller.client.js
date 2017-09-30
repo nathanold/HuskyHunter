@@ -14,13 +14,19 @@
                 mapData: mapData,
                 locationName: locationName,
                 additionalNotes: additionalNotes
+
             };
+
             console.log(clue);
             controlService
                 .submitClue(clue)
                 .then(function(user){
                     $location.url('/#!');
                 });
+
+            model.result = clue;
+            $scope.arr.push(clue);
         }
+
     }
 })();
