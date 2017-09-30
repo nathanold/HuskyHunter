@@ -4,29 +4,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-
             <h1>Submit Completed Clue {#}</h1>
             <a href="#!/" class="btn btn-primary">Home</a><br>
-
             <br>
-            <a ng-click="TODO"
-               class="btn btn-primary"> UPLOAD PHOTO </a>
-            <br><br>
-            <a href="#" class="btn btn-primary">Submit Completed Clue</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <form action="/api/upload/" method="post" enctype="multipart/form-data">
+                <input name="myFile" type="file" class="form-control"/>
+                <br/>
+                <button type="submit" class="btn btn-block btn-primary">Submit Completed Clue</button>
+            </form>
 
         </div>
     </div>
