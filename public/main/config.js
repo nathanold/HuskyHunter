@@ -30,9 +30,9 @@
                 controllerAs: 'model'
             })
 
-            .when('/submit', {
+            .when('/submit/:setNumber/:clueNumber', {
                 templateUrl: 'field/templates/submit.html',
-                controller: 'controlController',
+                controller: 'uploadController',
                 controllerAs: 'model'
             })
     }
