@@ -1,4 +1,4 @@
 (function (app) {
-    angular.module('huskyhunter', ['ngRoute']);
+    angular.module('huskyhunter', ['ngRoute', 'vsGoogleAutocomplete']);
 })();
 

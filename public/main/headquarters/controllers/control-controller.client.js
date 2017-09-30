@@ -3,7 +3,8 @@
         .module('huskyhunter')
         .controller('controlController', controlController);
 
-    function controlController($routeParams, controlService, $location) {
+    function controlController($routeParams, controlService, $location, $scope) {
+
         var model = this;
         model.sets = "OK";
 
@@ -13,6 +14,9 @@
                 .getClues()
                 .then(renderClues);
         }
+
+
+
 
         function renderClues(clues) {
             model.clues = clues;

@@ -7,23 +7,25 @@
             <a href="#!/" class="btn btn-primary">Home</a>
             <p></p><br>
 
+
+<p> Enter the single, CAPTIAL letter corresponding to this clue set. (ex: F)
+           <input type="text"
+                  class="form-control"
+                  placeholder="Set"
+                  ng-model="setNo"/></p>
 <!--Input Clue Number and choose which set it belongs to-->
-<p>
+<p><br>Enter the digits of this clue number (ex: 54)
     <input type="text"
            class="form-control"
            placeholder="Clue Number"
            ng-model="number"/>
     <br>
-<p>Which set of clues does this belong to?
-    <select ng-model="setNo">
-        <option value="A">A</option>
-        <option value="B">B</option>
-    </select> <br>
+
 </p>
 
-<br>
 
 <!--Input Information about the destination (name, location, etc...)-->
+Enter the name of the destination (ex: The Friendly Toast)
 <input type="text"
        class="form-control"
        placeholder="Name of Destination"
@@ -34,12 +36,33 @@
                    class="form-control"
                    placeholder="Address"
                    ng-model="mapData"/>
-<br><br>
+<br>
+ Enter any addtional, helpful information for the field team.
 <input type="text"
        class="form-control"
        placeholder="Additional Notes"
        ng-model="additionalNotes"/>
-</p>
+</p><br>
+
+Choose which field team to assign this to.
+<label class="radio-inline"><input type="radio" value="0" ng-model="assignedto" name="optradio">Unassigned</label>
+<label class="radio-inline"><input type="radio" value="1" ng-model="assignedto" name="optradio">Team 1</label>
+<label class="radio-inline"><input type="radio" value="2" ng-model="assignedto" name="optradio">Team 2</label>
+<label class="radio-inline"><input type="radio" value="3" ng-model="assignedto" name="optradio">Team 3</label>
+
+<br>
+
+            <form>
+                <input vs-google-autocomplete
+                       ng-model="address"
+                       name="address"
+                       type="text">
+            </form>
+
+
+
+
+ <br>
 
 <!--Button to submit clue to Database-->
 <a ng-click="model.submitClue(number, setNo, mapData, locationName, additionalNotes)"
