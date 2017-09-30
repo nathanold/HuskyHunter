@@ -2,8 +2,12 @@
 Thumbs.db
 ehthumbs.db
 
+# intelliJ file
+workspace.xml
+
 # Folder config file
 Desktop.ini
+
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
