@@ -14,7 +14,6 @@
         return api;
         function submitClue(clue) {
             var url = "/api/submitClue";
-
             console.log('request: ' + JSON.stringify(clue));
             return $http.post(url, clue)
                 .then(function (response) {

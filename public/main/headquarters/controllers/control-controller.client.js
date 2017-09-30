@@ -25,17 +25,18 @@
 
         init();
 
-        model.submitClue = function(number, setNo, mapData, locationName, additionalNotes){
+        model.submitClue = function(number, setNo, mapData, locationName, additionalNotes, assignedTo){
             var clue = {
                 number: number,
                 setNo: setNo,
                 mapData: mapData,
                 locationName: locationName,
                 additionalNotes: additionalNotes,
-                completed: false
+                completed: false,
+                assignedTo: assignedTo
             };
 
-            console.log(clue);
+            console.log("clue: " + clue);
             controlService
                 .submitClue(clue)
                 .then(function(){

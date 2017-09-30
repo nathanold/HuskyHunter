@@ -6,7 +6,8 @@ var controlSchema = mongoose.Schema({
     mapData: String,
     locationName: String,
     additionalNotes: String,
-    completed: Boolean
+    completed: Boolean,
+    assignedTo: Number
 }, {collection: "control"});
 
 module.exports = controlSchema;
