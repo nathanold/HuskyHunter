@@ -4,6 +4,7 @@ app.post('/api/submitClue', submitClue);
 app.get('/api/getClues', getClues);
 app.delete('/api/:clueId', deleteClue);
 app.put('/api/update', updateClue);
+app.put('/api/complete/:clueId', markComplete);
 console.log('control server');
 function submitClue(req, res) {
     var clue = req.body;
@@ -40,10 +41,23 @@ function deleteClue(req, res) {
         });
 }
 
-function updateClue(req, res){
+function updateClue(req, res) {
     var clue = req.body;
     controlModel
         .updateClue(clue)
+        .then(function (clue) {
+            res.json(clue);
+        }, function (err) {
+            res.send(err);
+        });
+}
+
+function markComplete(req, res) {
+    var clueId = req.params.clueId;
+    var clue = req.body;
+    console.log('marking '+clue +" complete");
+    controlModel
+        .markComplete(clueId, clue)
         .then(function (clue) {
             res.json(clue);
         }, function (err) {

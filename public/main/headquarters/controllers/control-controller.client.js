@@ -58,6 +58,14 @@
                 .then(function(){
                     location.reload();
                 })
+        };
+
+        model.markComplete = function(clue){
+            console.log('marking '+clue._id+ " complete");
+            controlService.markComplete(clue)
+                .then(function(){
+                    location.reload();
+                })
         }
     }
 })();

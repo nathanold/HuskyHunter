@@ -26,13 +26,13 @@
 
             .when('/field', {
                 templateUrl: 'field/templates/field-main.html',
-                controller: 'fieldController',
+                controller: 'controlController',
                 controllerAs: 'model'
             })
 
             .when('/submit', {
                 templateUrl: 'field/templates/submit.html',
-                controller: 'submitController',
+                controller: 'controlController',
                 controllerAs: 'model'
             })
 

@@ -8,7 +8,8 @@
             submitClue: submitClue,
             getClues: getClues,
             deleteClue: deleteClue,
-            updateClue: updateClue
+            updateClue: updateClue,
+            markComplete: markComplete
         };
         return api;
         function submitClue(clue) {
@@ -48,6 +49,15 @@
                 .then(function (response) {
                     return response.data;
                 });
+        }
+
+        function markComplete(clue){
+            var url = '/api/complete/'+clue._id;
+            console.log(url);
+            return $http.put(url, clue)
+                .then(function(response){
+                    return response.data;
+                })
         }
     }
 })();
