@@ -35,8 +35,5 @@
                 controller: 'controlController',
                 controllerAs: 'model'
             })
-
-
-
     }
 })();
