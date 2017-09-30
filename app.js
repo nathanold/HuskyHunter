@@ -18,4 +18,4 @@ if (process.env.MLAB_USERNAME) { // check if running remotely
     connectionString += 'ds139362.mlab.com:39362/heroku_nz263cn6'; // user yours
 }
 mongoose.connect(connectionString);
-require('./public/server/services/control.service.server');
+require('./public/server/services/control.service.server.js');

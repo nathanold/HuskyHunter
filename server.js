@@ -13,3 +13,5 @@ require ("./app.js");
 var port = process.env.PORT || 3000;
 
 app.listen(port);
+
+require('./public/server/services/control.service.server.js');

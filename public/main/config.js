@@ -13,7 +13,11 @@
                 controller: 'controlController',
                 controllerAs: 'model'
             })
-
+            .when('/list',{
+                templateUrl: 'headquarters/templates/listOfClues.html',
+                controller: 'controlController',
+                controllerAs: 'model'
+            })
             .when('/settings', {
                 templateUrl: 'headquarters/templates/settings.html',
                 controller: 'controlController',

@@ -3,7 +3,7 @@
         .module('huskyhunter')
         .controller('controlController', controlController);
 
-    function controlController($routeParams, controlService) {
+    function controlController($routeParams, controlService, $location) {
         var model = this;
         model.sets = "OK";
 
@@ -20,13 +20,24 @@
             console.log(clue);
             controlService
                 .submitClue(clue)
-                .then(function(user){
+                .then(function(){
                     $location.url('/#!');
+                },
+                function(err){
+                    console.log(err);
                 });
 
             model.result = clue;
-            $scope.arr.push(clue);
-        }
+            //$scope.arr.push(clue);
+        };
 
+        model.getClues = function(){
+            controlService
+                .getClues()
+                .then(function(response){
+                    console.log('this is the data: '+response.data);
+                    return response.data;
+                })
+        }
     }
 })();
