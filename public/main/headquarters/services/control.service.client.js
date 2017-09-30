@@ -9,17 +9,11 @@
             getClues: getClues
         };
         return api;
-        function submitClue(number, setNo, mapData, locationName, additionalNotes) {
+        function submitClue(clue) {
             var url = "/api/submitClue";
-            var clueData = {
-                number: number,
-                setNo: setNo,
-                mapData: mapData,
-                locationName: locationName,
-                additionalNotes: additionalNotes
-            };
-            console.log('request: '+ JSON.stringify(clueData));
-            return $http.post(url, clueData)
+
+            console.log('request: '+ JSON.stringify(clue));
+            return $http.post(url, clue)
                 .then(function (response) {
                     console.log('client response: '+response.data);
                     return response.data;
@@ -30,6 +24,7 @@
 
         function getClues(){
             var url = '/api/getClues';
+            console.log(url);
             return $http.get(url)
                 .then(function(response){
                     return response.data;

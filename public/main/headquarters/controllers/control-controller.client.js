@@ -7,6 +7,20 @@
         var model = this;
         model.sets = "OK";
 
+        function init() {
+            console.log('finding all clues');
+            controlService
+                .getClues()
+                .then(renderClues);
+        }
+
+        function renderClues(clues) {
+            model.clues = clues;
+            console.log(model.clues);
+        }
+
+        init();
+
         model.submitClue = function(number, setNo, mapData, locationName, additionalNotes){
             var clue = {
                 number: number,
@@ -32,12 +46,8 @@
         };
 
         model.getClues = function(){
-            controlService
-                .getClues()
-                .then(function(response){
-                    console.log('this is the data: '+response.data);
-                    return response.data;
-                })
+            console.log('getting clues');
+
         }
     }
 })();

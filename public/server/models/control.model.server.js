@@ -6,9 +6,11 @@ controlModel.submitClue = submitClue;
 controlModel.getClues = getClues;
 module.exports = controlModel;
 function submitClue(clue) {
+    console.log('model, creating clue: '+clue);
     return controlModel.create(clue);
 }
 
 function getClues(){
+    console.log('finding all clues');
     return controlModel.find();
 }
