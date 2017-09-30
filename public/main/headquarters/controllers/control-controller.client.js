@@ -49,9 +49,27 @@
             //$scope.arr.push(clue);
         };
 
-        model.getClues = function(){
-            console.log('getting clues');
+        model.deleteClue = function(clueId){
+            console.log('delet clue');
+            controlService.deleteClue(clueId)
+                .then(function () {
+                    location.reload();
+                })
+        };
 
+        model.updateClue = function(clue){
+            controlService.updateClue(clue)
+                .then(function(){
+                    location.reload();
+                })
+        };
+
+        model.markComplete = function(clue){
+            console.log('marking '+clue._id+ " complete");
+            controlService.markComplete(clue)
+                .then(function(){
+                    location.reload();
+                })
         }
     }
 })();
