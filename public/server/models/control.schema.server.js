@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
 
 var controlSchema = mongoose.Schema({
-    number: String,
+    number: Number,
     setNo: String,
+    mapData: String,
     locationName: String,
-    additionalNotes: String
+    additionalNotes: String,
+    completed: Boolean
 }, {collection: "control"});
 
 module.exports = controlSchema;

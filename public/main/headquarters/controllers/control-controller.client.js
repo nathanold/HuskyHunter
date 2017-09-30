@@ -27,8 +27,8 @@
                 setNo: setNo,
                 mapData: mapData,
                 locationName: locationName,
-                additionalNotes: additionalNotes
-
+                additionalNotes: additionalNotes,
+                completed: false
             };
 
             console.log(clue);

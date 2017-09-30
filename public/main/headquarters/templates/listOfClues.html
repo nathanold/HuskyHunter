@@ -1,2 +1,36 @@
-<h1>List of Clues</h1>
-{{model.clues}}
+<div class="container">
+    <h1>List of Clues</h1>
+
+    <li ng-repeat="clue in model.clues"
+        class="list-group-item">
+        <div class="row">
+            {{clue}}
+            <div class="col-lg-5 col-md-8 col-sm-11 col-xs-11 dropdown-toggle" data-toggle="dropdown">
+                # {{clue.number}}
+            </div>
+            <div class="container">
+                <input type="text" class="form-control" id="password" placeholder="Set Number"
+                       ng-model="clue.setNo">
+                <input type="text" class="form-control" id="firstName" placeholder="Map Data"
+                       ng-model="clue.mapData">
+                <input type="text" class="form-control" id="lastName" placeholder="Location Name"
+                       ng-model="clue.locationName">
+                <input type="text" class="form-control" id="email" placeholder="Notes"
+                       ng-model="clue.additionalNotes">
+                <button type="button" class="btn btn-primary btn-xs"
+                        ng-click="model.deleteClue(clue._id)">
+                <span class="glyphicon glyphicon-remove pull-right">
+
+            </span>
+
+                </button>
+                <button type="button" class="btn btn-primary btn-xs"
+                        ng-click="model.updateClue(clue)">
+                <span class="glyphicon glyphicon-ok pull-right">
+            </span>
+                </button>
+            </div>
+        </div>
+    </li>
+
+</div>
