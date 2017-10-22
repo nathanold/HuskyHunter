@@ -6,7 +6,7 @@
     function configuration($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'home.html'
+                templateUrl: 'login.html'
             })
             .when('/addClue', {
                 templateUrl: 'headquarters/templates/addClue.html',
@@ -23,6 +23,10 @@
                 controller: 'controlController',
                 controllerAs: 'model'
             })
+            .when('/home', {
+                templateUrl: 'home.html'
+            })
+
 
             .when('/field', {
                 templateUrl: 'field/templates/field-main.html',

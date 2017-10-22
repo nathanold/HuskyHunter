@@ -5,3 +5,9 @@ input.form-control {
 body {
     padding-top: 36px;
 }
+
+#padded-down{
+    margin: 20% 20% 20% 20%;
+    width:10%;
+    background-color: red;
+}
