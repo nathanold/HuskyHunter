@@ -1,6 +1,7 @@
 <div class="container">
-    <h1>List of Clues</h1>
+    <a href="#!/download" class="btn btn-success pull-right">Download all pictures in zip </a>
 
+    <h1>List of Clues</h1>
     <li ng-repeat="clue in model.clues"
         class="list-group-item">
         <div class="row">
@@ -8,7 +9,7 @@
             <div class="col-lg-5 col-md-8 col-sm-11 col-xs-11 dropdown-toggle" data-toggle="dropdown">
                 # {{clue.number}}
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <input type="text" class="form-control" id="password" placeholder="Set Number"
                        ng-model="clue.setNo">
                 <input type="text" class="form-control" id="firstName" placeholder="Map Data"

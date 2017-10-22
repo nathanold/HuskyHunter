@@ -29,7 +29,11 @@
                 controller: 'controlController',
                 controllerAs: 'model'
             })
-
+            .when('/download', {
+                templateUrl: 'field/templates/field-main.html',
+                controller: 'controlController',
+                controllerAs: 'model'
+            })
             .when('/submit/:setNumber/:clueNumber', {
                 templateUrl: 'field/templates/submit.html',
                 controller: 'uploadController',

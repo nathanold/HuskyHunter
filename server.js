@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public/main'));
 
 require('./public/server/services/control.service.server.js');
+require('./public/server/services/upload.service.server.js');
+require('./public/server/services/download.service.server.js');
+
 require ("./app.js");
 
 var port = process.env.PORT || 3000;
