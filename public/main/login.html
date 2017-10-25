@@ -1,15 +1,21 @@
 <div class="container padded-down">
     <h1 class="display-1">huskyhunter pre-alpha</h1>
     <div class="form-group">
-    <input type="text"
-           class="form-control"
-           placeholder="username"/>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+               type="text"
+               class="form-control"
+               ng-model="username"
+               placeholder="Username"
+               required
+        />
 
     <input type="password"
-           class="form-control"
-           placeholder="password"/>
-
-    <a class="btn btn-primary btn-block"
-       href="#!/home">Login</a>
+            class="form-control"
+            ng-model="password"
+           placeholder="Password"
+            required/>
+        <br>
+    <a ng-click="model.login(username, password)"
+            class="btn btn-primary btn-block">Login</a>
     </div>
 </div>
