@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                Field Team 3
+            </h3>
+            <a href="#!/home" class="btn btn-primary">Home</a>
+
+            <p></p>
+            <div class="alert alert-success alert-dismissable">
+
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    ×
+                </button>
+                <h4>
+                    Alert!
+                </h4> <strong>Warning!</strong> ....
+            </div>
+
+            <table class="table">
+                <thead>
+                <p>[Insert really cool google map here!]</p>
+                <tr>
+                    <th>
+                        Set Number
+                    </th>
+                    <th>
+                        Clue Number
+                    </th>
+                    <th>
+                        Location Name
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Distance from Current Location
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 3">
+                    <th>
+                        {{clue.setNo}}
+                    </th>
+                    <th>
+                        {{clue.number}}
+                    </th>
+                    <th>
+                        {{clue.locationName}}
+                    </th>
+                    <th>
+                        {{clue.mapData}}
+                    </th>
+                    <!--<th>-->
+                    <!--{{clue.assignedTo}}-->
+                    <!--</th>-->
+                    <th>
+                        <!--0.7 miles--> {{clue}}
+                    </th>
+                    <th>
+
+                        <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">
+                            <!--<span class="glyphicon glyphicon-upload pull-right"></span> --> [SUBMIT]
+                        </a>
+
+                        <a id="delete-clue" href ng-click="model.deleteClue(clue._id)">[DELETE]</a>
+
+                        </a>
+
+                    </th>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <br><br>
+    <p>Example of submit page (you would usually click one of the tasks above to submit that task)</p>
+    <a href="#!/submit" class="btn btn-primary">Submit</a>
+    <br><br>
+    <strong><br>Clicking on one of these items will open up a detail page,
+        <br> allowing the user to <u>UPLOAD</u> a photo, as well
+        <br>as any <u>NOTES</u> that HQ provided.
+        <br> Perhaps the item will be colored RED if there are specific <br>notes associated with it.
+
+
+</div>
+
+
+</div>
+</div>
+</div>

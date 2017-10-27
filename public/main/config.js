@@ -40,8 +40,32 @@
                     currentUser: checkLoggedIn
                 }
             })
-            .when('/field', {
-                templateUrl: 'field/templates/field-main.html',
+            .when('/field1', {
+                templateUrl: 'field/templates/field-team-1.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/field2', {
+                templateUrl: 'field/templates/field-team-2.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/field3', {
+                templateUrl: 'field/templates/field-team-3.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/unassigned', {
+                templateUrl: 'field/templates/unassigned.html',
                 controller: 'controlController',
                 controllerAs: 'model',
                 resolve: {
@@ -49,7 +73,7 @@
                 }
             })
             .when('/download', {
-                templateUrl: 'field/templates/field-main.html',
+                templateUrl: 'field/templates/field-team-1.html',
                 controller: 'controlController',
                 controllerAs: 'model',
                 resolve: {
@@ -64,6 +88,24 @@
                     currentUser: checkLoggedIn
                 }
             })
+
+            .when('/faq', {
+                templateUrl: 'headquarters/templates/FAQ.html',
+                controller: 'userController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/discord', {
+                templateUrl: 'headquarters/templates/discord.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+
     }
 
     function checkLoggedIn($q, $location, userService) {

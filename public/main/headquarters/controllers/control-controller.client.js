@@ -46,7 +46,7 @@
         };
 
         model.deleteClue = function(clueId){
-            console.log('delet clue');
+            console.log('delete clue');
             controlService.deleteClue(clueId)
                 .then(function () {
                     location.reload();
