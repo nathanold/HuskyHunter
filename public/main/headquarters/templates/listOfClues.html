@@ -1,6 +1,11 @@
 <div class="container">
     <a href="#!/download" class="btn btn-success pull-right">Download all pictures in zip </a>
 
+    <br/>
+    <div id="mapid"></div>
+
+    <br/>
+
     <h1>List of Clues</h1>
     <li ng-repeat="clue in model.clues"
         class="list-group-item">
@@ -22,19 +27,21 @@
                        ng-model="clue.assignedTo">
                 <button type="button" class="btn btn-primary btn-xs"
                         ng-click="model.deleteClue(clue._id)">
-                <span class="glyphicon glyphicon-remove pull-right">
-
+                <span class="pull-right">
+Delete
             </span>
 
                 </button>
                 <button type="button" class="btn btn-primary btn-xs"
                         ng-click="model.updateClue(clue)">
-                <span class="glyphicon glyphicon-ok pull-right">
+                <span class="pull-right">
+                    Update
             </span>
                 </button>
                 <button type="button" class="btn btn-primary btn-xs"
                         ng-click="model.markComplete(clue)">
-                <span class="glyphicon glyphicon-exclamation-sign pull-right">
+                <span class="pull-right">
+                    Mark Complete
             </span>
                 </button>
             </div>

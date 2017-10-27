@@ -4,19 +4,14 @@
         .controller('controlController', controlController);
 
     function controlController($routeParams, controlService, $location, $scope) {
-
         var model = this;
         model.sets = "OK";
-
         function init() {
             console.log('finding all clues');
             controlService
                 .getClues()
                 .then(renderClues);
         }
-
-
-
 
         function renderClues(clues) {
             model.clues = clues;
@@ -40,7 +35,7 @@
             controlService
                 .submitClue(clue)
                 .then(function(){
-                    $location.url('/#!');
+                    $location.url('/home');
                 },
                 function(err){
                     console.log(err);
