@@ -6,8 +6,10 @@ body {
     padding-top: 36px;
 }
 
-#padded-down{
+#padded-down {
     margin: 20% 20% 20% 20%;
-    width:10%;
+    width: 10%;
     background-color: red;
 }
+
+#mapid { height: 180px; }

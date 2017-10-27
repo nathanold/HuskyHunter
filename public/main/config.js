@@ -18,7 +18,6 @@
                     currentUser: checkLoggedIn
                 }
             })
-
             .when('/list',{
                 templateUrl: 'headquarters/templates/listOfClues.html',
                 controller: 'controlController',
@@ -71,7 +70,7 @@
         var deferred = $q.defer();
         userService.checkLoggedIn()
             .then(function (currentUser) {
-                console.log('current user ' + currentUser);
+                console.log('current user ' + JSON.stringify(currentUser));
                 if (currentUser === '0') {
                     deferred.reject();
                     $location.url('/')

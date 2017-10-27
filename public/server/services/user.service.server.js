@@ -41,9 +41,6 @@ function localStrategy(username, password, done) {
             }
         );
 }
-function login2(req, res) {
-    console.log('login 2')
-}
 function login(req, res) {
     console.log('user, loggin in');
     var user = req.user;
@@ -118,6 +115,7 @@ function deserializeUser(user, done) {
         );
 }
 function checkLoggedIn(req, res) {
+    console.log(req.isAuthenticated());
     if (req.isAuthenticated()) {
         res.json(req.user);
     }
