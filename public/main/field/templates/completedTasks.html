@@ -2,9 +2,8 @@
     <div class="row">
         <div class="col-md-12">
             <h3>
-                Field Team 3
+                Completed Tasks
 
-                <br><br> <font color="red"> MODIFICATIONS MADE IN FIELD-TEAM-1.  TO JOSH: REPLACE WITH FT1 # </font>
             </h3>
             <a href="#!/home" class="btn btn-primary">Home</a>
 
@@ -18,7 +17,6 @@
 
             <table class="table">
                 <thead>
-                <p>[Insert really cool google map here!]</p>
                 <tr>
                     <th>
                         Set Number
@@ -32,16 +30,10 @@
                     <th>
                         Address
                     </th>
-                    <th>
-                        Distance from Current Location
-                    </th>
-                    <th>
-                        Actions
-                    </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 3">
+                <tr ng-repeat="clue in model.clues" ng-if="clue.completed == true">
                     <th>
                         {{clue.setNo}}
                     </th>
@@ -55,16 +47,6 @@
                         {{clue.mapData}}
                     </th>
                     <th>
-                        0.7 miles
-                    </th>
-                    <th>
-
-                        <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">
-                            <!--<span class="glyphicon glyphicon-upload pull-right"></span> --> [SUBMIT]
-                        </a>
-
-                        <a id="delete-clue" href ng-click="model.deleteClue(clue._id)">[DELETE]</a>
-
                         </a>
 
                     </th>
@@ -76,19 +58,8 @@
 
     </div>
 
-    <br><br>
-    <p>Example of submit page (you would usually click one of the tasks above to submit that task)</p>
-    <a href="#!/submit" class="btn btn-primary">Submit</a>
-    <br><br>
-    <strong><br>Clicking on one of these items will open up a detail page,
-        <br> allowing the user to <u>UPLOAD</u> a photo, as well
-        <br>as any <u>NOTES</u> that HQ provided.
-        <br> Perhaps the item will be colored RED if there are specific <br>notes associated with it.
-
-
-</div>
-
 
 </div>
 </div>
 </div>
+

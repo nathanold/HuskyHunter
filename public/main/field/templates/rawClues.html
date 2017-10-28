@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                Raw Clue DataBase
+            </h3>
+            <a href="#!/home" class="btn btn-primary">Home</a>
+
+
+            <table class="table">
+                <tbody>
+                <tr ng-repeat="clue in model.clues">
+
+                    <th>
+                        {{clue}}
+                    </th>
+                    <th>
+                        <a id="delete-clue" href ng-click="model.deleteClue(clue._id)">[DELETE]</a>
+                        <a id="complete-clue" href ng-click="model.markComplete(clue)">[COMPLETE]</a>
+
+                    </th>
+
+                </tr>
+
+                </tbody>
+            </table> </div> </div> </div>
+        </div>
+
+    </div>
+
+</div>
