@@ -1,10 +1,3 @@
 # HuskyHunter
 
-# web-dev-template
-
-1. git clone https://github.com/jannunzi/web-dev-template.git
-1. cd web-dev-template
-1. npm install
-1. mongod
-1. node server.js
-1. browse to localhost:3000
+App written for use for Husky Hunt 2017, for use by the team "The Real Huskies of Suffolk County".
