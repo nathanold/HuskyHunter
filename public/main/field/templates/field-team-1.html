@@ -13,8 +13,9 @@
             <div class="alert alert-success alert-dismissable">
 
                 <h4>
-                    Welcome!
-                </h4> Hello field team 1.
+                    Hello field team 1.
+                </h4> You are tasked with all clues in the following regions:
+                      <br>- Back Bay<br>- Downtown Crossing<br>- North End
             </div>
             <!-- End: Green alert window-->
 
@@ -22,19 +23,19 @@
                 <thead>
                 <tr>
                     <th>
-                        Set Number
+                        Set
                     </th>
                     <th>
-                        Clue Number
+                        Number
                     </th>
                     <th>
-                        Location Name
+                        Name
                     </th>
                     <th>
                         Address
                     </th>
                     <th>
-                        Distance from Current Location
+                        Description <!--Distance to current location-->
                     </th>
                     <th>
                         Actions
@@ -52,32 +53,32 @@
                     <th>
                         {{clue.locationName}}
                     </th>
+
                     <th>
                         {{clue.mapData}}
                     </th>
                     <th>
-                        <!--0.7 miles-->
+                        <!--&lt;!&ndash;0.7 miles&ndash;&gt;-->
                         {{clue.additionalNotes}}
                     </th>
+
                     <th>
 
-                                <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">
-                <!--<span class="glyphicon glyphicon-upload pull-right"></span> --> [SUBMIT]
-                                </a>
+                        <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">[SUBMIT] </a>
 
                         <a id="delete-clue" href ng-click="model.deleteClue(clue._id)">[DELETE]</a>
 
                         </a>
 
                             </th>
-                        </tr>
 
+                </tr>
                         </tbody>
-                    </table>
+
+            </table>
+
                 </div>
-
     </div>
-
 
     <br><br>
     <p>[Insert really cool google map here!]</p>
@@ -88,3 +89,9 @@
         </div>
     </div>
 </div>
+
+
+
+<!--<tbody>-->
+<!--<tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 1 && clue.completed == false">-->
+    <!--<th colspan="5">{{clue.additionalNotes}}</th>-->

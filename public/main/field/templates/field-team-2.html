@@ -1,41 +1,41 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <h3>
                 Field Team 2
-
-                <br><br> <font color="red"> MODIFICATIONS MADE IN FIELD-TEAM-1.  TO JOSH: REPLACE WITH FT1 # </font>
-
-
             </h3>
             <a href="#!/home" class="btn btn-primary">Home</a>
 
+            <!-- Green alert window-->
             <p></p>
             <div class="alert alert-success alert-dismissable">
 
                 <h4>
-                    Alert!
-                </h4> <strong>Warning!</strong> ....
+                    Hello field team 2.
+                </h4> You are tasked with all clues in the following regions:
+                <br>- Cambridge<br>- Somerville<br>
             </div>
+            <!-- End: Green alert window-->
 
             <table class="table">
                 <thead>
-                <p>[Insert really cool google map here!]</p>
                 <tr>
                     <th>
-                        Set Number
+                        Set
                     </th>
                     <th>
-                        Clue Number
+                        Number
                     </th>
                     <th>
-                        Location Name
+                        Name
                     </th>
                     <th>
                         Address
                     </th>
                     <th>
-                        Distance from Current Location
+                        Description <!--Distance to current location-->
                     </th>
                     <th>
                         Actions
@@ -43,7 +43,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 2">
+                <tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 2 && clue.completed == false">
                     <th>
                         {{clue.setNo}}
                     </th>
@@ -53,44 +53,45 @@
                     <th>
                         {{clue.locationName}}
                     </th>
+
                     <th>
                         {{clue.mapData}}
                     </th>
                     <th>
-                        0.7 miles
+                        <!--&lt;!&ndash;0.7 miles&ndash;&gt;-->
+                        {{clue.additionalNotes}}
                     </th>
+
                     <th>
 
-                        <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">
-                            <!--<span class="glyphicon glyphicon-upload pull-right"></span> --> [SUBMIT]
-                        </a>
+                        <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">[SUBMIT] </a>
 
                         <a id="delete-clue" href ng-click="model.deleteClue(clue._id)">[DELETE]</a>
 
                         </a>
 
                     </th>
+
                 </tr>
-
                 </tbody>
-            </table>
-        </div>
 
+            </table>
+
+        </div>
     </div>
 
     <br><br>
-    <p>Example of submit page (you would usually click one of the tasks above to submit that task)</p>
-    <a href="#!/submit" class="btn btn-primary">Submit</a>
+    <p>[Insert really cool google map here!]</p>
     <br><br>
-    <strong><br>Clicking on one of these items will open up a detail page,
-        <br> allowing the user to <u>UPLOAD</u> a photo, as well
-        <br>as any <u>NOTES</u> that HQ provided.
-        <br> Perhaps the item will be colored RED if there are specific <br>notes associated with it.
-
-
-</div>
 
 
 </div>
 </div>
 </div>
+</div>
+
+
+
+<!--<tbody>-->
+<!--<tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 1 && clue.completed == false">-->
+<!--<th colspan="5">{{clue.additionalNotes}}</th>-->

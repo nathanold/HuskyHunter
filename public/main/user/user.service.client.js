@@ -82,6 +82,8 @@
 
         function login(username, password) {
             var url = "/api/login";
+
+
             var credentials = {
                 username: username,
                 password: password

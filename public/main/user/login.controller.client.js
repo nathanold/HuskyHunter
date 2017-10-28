@@ -6,7 +6,12 @@
     function userController($routeParams, userService, $location, $scope) {
 
         var model = this;
+        $scope.firstName = "person";
+
         model.login = function (username, password) {
+
+            $scope.firstName = username;
+
             if (!username) {
                 model.message = "Username is required, please try again";
                 return;
