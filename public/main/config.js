@@ -123,6 +123,12 @@
                     currentUser: checkLoggedIn
                 }
             })
+            .when('/allUploadedFiles', {
+                templateUrl: 'field/templates/uploads',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
 
     }
 

@@ -7,18 +7,38 @@
 <br>
 <br>
 <!--Section for additional options that headquarters center will have to be able to do-->
-Manual upload: ___
+            <h4>Google Drive upload for random files</h4>
+            <code><strong>Username:</strong> huskyhunter2017@gmail.com | <strong>Password:</strong> (what was on our shirts last year) x2</code><br>
+            <a href="https://script.google.com/macros/s/AKfycbwTffz1IOjXvIX4kxO7qYPgLwqe_2PCscR0QSf1mX0/dev"
+               class="btn btn-primary">DRIVE Upload</a>
+            <a href="https://drive.google.com/drive/folders/0BxqQbTn6xXzeRERtZGRtZm54bU0?usp=sharing"> see folder</a><br>
 
-            <a href="https://script.google.com/macros/s/AKfycbxsAQUIDCD8Z-GhM-8E-uGkUZWCAs3WP-tIt-EjRINnqgkxIio/exec"
-               class="btn btn-primary">Upload</a>
+
 
             <!--<iframe src="https://script.google.com/macros/s/AKfycbxsAQUIDCD8Z-GhM-8E-uGkUZWCAs3WP-tIt-EjRINnqgkxIio/exec"-->
                     <!--width="100%" height="500"-->
                     <!--allowfullscreen sandbox>-->
                 <!--<p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">-->
                     <!--Fallback link for browsers that don't support iframes-->
-                <!--</a> </p>-->
+            <!--</a> </p>-->
             <!--</iframe>-->
+<br>
+            <h4>Manual photo upload</h4>
+
+            <p> Enter SET (ex: A)
+                <input type="text"
+                       class="form-control"
+                       placeholder="Set"
+                       ng-model="setNo"/></p>
+            <!--Input Clue Number and choose which set it belongs to-->
+            <p>Enter Clue Number (ex. 55)
+                <input type="text"
+                       class="form-control"
+                       placeholder="Clue Number"
+                       ng-model="number"/>
+            </p>
+            <a ng-click="model.markComplete(clue)" href="#!/submit/{{setNo}}/{{number}}" class="btn btn-primary">MANUAL UPLOAD</a>
+
 
         </div>
     </div></div>

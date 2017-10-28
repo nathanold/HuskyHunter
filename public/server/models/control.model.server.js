@@ -27,6 +27,9 @@ function updateClue(clue){
 
 function markComplete(clueId,clue){
     var updatedClue = clue;
-    updatedClue.completed = true;
+    var state = clue.completed;
+    console.log("STATE:" + state);
+    updatedClue.completed = !state;
     return controlModel.update({_id: clueId}, {$set: updatedClue});
 }
+

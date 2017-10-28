@@ -5,7 +5,11 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Submit Completed Clue {{model.setNumber}} {{model.clueNumber}}</h1>
-            <a href="#!/home" class="btn btn-primary">Home</a><br>
+            <a href="#!/home" class="btn btn-primary">Home</a><br><br>
+            Note: By reaching this page, clue {{model.setNumber}}{{model.clueNumber}} has already been marked as <strong>COMPLETE</strong>,
+            and is no longer a task for your field team. <br>
+            If this was a mistake, you can go <a href="#!/completedTasks">HERE</a> and un-complete the task (WIP).<br>
+
             <br>
             <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
                 <input name="myFile" type="file" class="form-control"/>

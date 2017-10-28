@@ -64,9 +64,7 @@
 
                     <th>
 
-                        <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">[SUBMIT] </a>
-
-                        <a id="delete-clue" href ng-click="model.deleteClue(clue._id)">[DELETE]</a>
+                        <a ng-click="model.markComplete(clue)" href="#!/submit/{{clue.setNo}}/{{clue.number}}">[COMPLETE] </a>
 
                         </a>
 

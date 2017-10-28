@@ -30,6 +30,9 @@
                     <th>
                         Address
                     </th>
+                    <th>
+                        Overwrite Submission
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -45,6 +48,10 @@
                     </th>
                     <th>
                         {{clue.mapData}}
+                    </th>
+                    <th>
+                    <a href="#!/submit/{{clue.setNo}}/{{clue.number}}">[RE-SUBMIT] </a><br>
+                        <a id="undoComplete-clue" href ng-click="model.markComplete(clue)">[UN-COMPLETE (broken)]</a>
                     </th>
                     <th>
                         </a>
