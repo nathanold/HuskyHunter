@@ -1,7 +1,6 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-
             <h1>huskyhunter 1.0</h1>
             <a href="#!/discord" class="btn btn-success">Access Team Discord</a>
             <div ng-if="model.isHQ()"><a href="#!/addClue" class="btn btn-warning">HQ: Add A New Clue</a>
@@ -21,7 +20,7 @@
             <a href="#!" class="btn btn-danger">All Completed Tasks</a>
             <br>
             <a href="#!/faq" class="btn btn-success">HELP</a>
-
+            <div ng-if="model.isAdmin()"><a href="#!/rawClues" class="btn btn-danger">Raw Clue Data (dev only)</a></div>
 
         </div>
     </div>
