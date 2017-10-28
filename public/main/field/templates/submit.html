@@ -11,13 +11,28 @@
             If this was a mistake, you can go <a href="#!/completedTasks">HERE</a> and un-complete the task (WIP).<br>
 
             <br>
-            <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
+         <!--   <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
                 <input name="myFile" type="file" class="form-control"/>
                 <br/>
                 <button type="submit" class="btn btn-block btn-primary">Submit Completed Clue</button>
             </form>
-
+-->
         </div>
     </div>
 </div>
+<section class="container main">
+    <p>This example shows how to use the <code>Dropbox.filesUpload()</code> [<a href="http://dropbox.github.io/dropbox-sdk-js/Dropbox.html#filesUpload">docs</a>] method to upload a file.</p>
+
+    <form ng-submit="model.uploadFile()">
+        <input type="text" id="access-token" placeholder="Access token" />
+        <input type="file" id="file-upload" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- A place to show the status of the upload -->
+    <h2 id="results"></h2>
+</section>
+
+
+
 </html>
