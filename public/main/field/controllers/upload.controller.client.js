@@ -14,7 +14,7 @@
 
         model.uploadFile = function () {
             console.log('uploading file');
-            var ACCESS_TOKEN = document.getElementById('access-token').value;
+            var ACCESS_TOKEN = "5Krppq0h5rAAAAAAAAAAB14kHrsSKy216SSlWLC67Wo0O3Nxkgg6emSvgZif_WkX";
             var dbx = new Dropbox({accessToken: ACCESS_TOKEN});
             var fileInput = document.getElementById('file-upload');
             var file = fileInput.files[0];
