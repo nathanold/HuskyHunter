@@ -36,7 +36,7 @@
             })
             .when('/home', {
                 templateUrl: 'home.html',
-                controller: 'userController',
+                controller: 'homeController',
                 controllerAs: 'model',
                 resolve: {
                     currentUser: checkLoggedIn
