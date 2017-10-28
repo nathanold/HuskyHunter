@@ -1,10 +1,13 @@
 # HuskyHunter
 
-# web-dev-template
+App written for use for Husky Hunt 2017, for use by the team "The Real Huskies of Suffolk County".  Enables coordination between clue decoders at the team's headquarters, and other members of the team out in the field.  Provides a centralized point of data organization and clue completion.
 
-1. git clone https://github.com/jannunzi/web-dev-template.git
-1. cd web-dev-template
-1. npm install
-1. mongod
-1. node server.js
-1. browse to localhost:3000
+<p>
+  <img src="IMG_8167.PNG" width="350"/>
+</p>
+
+<br>
+This application has humble beginnings as a concept written on apartment whiteboards.
+<p>
+  <img src="IMG_8007.jpg" width="700"/>
+</p>
