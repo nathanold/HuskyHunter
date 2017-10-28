@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -6,20 +8,18 @@
             </h3>
             <a href="#!/home" class="btn btn-primary">Home</a>
 
+            <!-- Green alert window-->
             <p></p>
             <div class="alert alert-success alert-dismissable">
 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                    ×
-                </button>
                 <h4>
-                    Alert!
-                </h4> <strong>Warning!</strong> ....
+                    Welcome!
+                </h4> Hello field team 1.
             </div>
+            <!-- End: Green alert window-->
 
             <table class="table">
                 <thead>
-                <p>[Insert really cool google map here!]</p>
                 <tr>
                     <th>
                         Set Number
@@ -42,7 +42,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 1">
+                <tr ng-repeat="clue in model.clues" ng-if="clue.assignedTo == 1 && clue.completed == false">
                     <th>
                         {{clue.setNo}}
                     </th>
@@ -55,11 +55,9 @@
                     <th>
                         {{clue.mapData}}
                     </th>
-                    <!--<th>-->
-                        <!--{{clue.assignedTo}}-->
-                    <!--</th>-->
                     <th>
-                        <!--0.7 miles--> {{clue}}
+                        <!--0.7 miles-->
+                        {{clue.additionalNotes}}
                     </th>
                     <th>
 
@@ -80,19 +78,13 @@
 
     </div>
 
+
+    <br><br>
+    <p>[Insert really cool google map here!]</p>
                 <br><br>
-                <p>Example of submit page (you would usually click one of the tasks above to submit that task)</p>
-                <a href="#!/submit" class="btn btn-primary">Submit</a>
-                <br><br>
-                <strong><br>Clicking on one of these items will open up a detail page,
-                    <br> allowing the user to <u>UPLOAD</u> a photo, as well
-                    <br>as any <u>NOTES</u> that HQ provided.
-                    <br> Perhaps the item will be colored RED if there are specific <br>notes associated with it.
 
 
             </div>
-
-
         </div>
     </div>
 </div>

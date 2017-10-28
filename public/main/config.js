@@ -74,6 +74,22 @@
                     currentUser: checkLoggedIn
                 }
             })
+            .when('/rawClues', {
+                templateUrl: 'field/templates/rawClues.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/completedTasks', {
+                templateUrl: 'field/templates/completedTasks.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
             .when('/download', {
                 templateUrl: 'field/templates/field-team-1.html',
                 controller: 'controlController',
