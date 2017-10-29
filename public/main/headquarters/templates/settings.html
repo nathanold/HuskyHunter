@@ -7,37 +7,34 @@
 <br>
 <br>
 <!--Section for additional options that headquarters center will have to be able to do-->
-            <h4>Google Drive upload for random files</h4>
-            <code><strong>Username:</strong> huskyhunter2017@gmail.com | <strong>Password:</strong> (what was on our shirts last year) x2</code><br>
-            <a href="https://script.google.com/macros/s/AKfycbwTffz1IOjXvIX4kxO7qYPgLwqe_2PCscR0QSf1mX0/dev"
-               class="btn btn-primary">DRIVE Upload</a>
-            <a href="https://drive.google.com/drive/folders/0BxqQbTn6xXzeRERtZGRtZm54bU0?usp=sharing"> see folder</a><br>
-
-
-
-            <!--<iframe src="https://script.google.com/macros/s/AKfycbxsAQUIDCD8Z-GhM-8E-uGkUZWCAs3WP-tIt-EjRINnqgkxIio/exec"-->
-                    <!--width="100%" height="500"-->
-                    <!--allowfullscreen sandbox>-->
-                <!--<p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">-->
-                    <!--Fallback link for browsers that don't support iframes-->
-            <!--</a> </p>-->
-            <!--</iframe>-->
+            <!--<h4>Google Drive upload for random files</h4>-->
+            <!--<code><strong>Username:</strong> huskyhunter2017@gmail.com | <strong>Password:</strong> (what was on our shirts last year) x2</code><br>-->
+            <!--<a href="https://script.google.com/macros/s/AKfycbwTffz1IOjXvIX4kxO7qYPgLwqe_2PCscR0QSf1mX0/dev"-->
+               <!--class="btn btn-primary">DRIVE Upload</a>-->
+            <!--<a href="https://drive.google.com/drive/folders/0BxqQbTn6xXzeRERtZGRtZm54bU0?usp=sharing"> see folder</a><br>-->
 <br>
-            <h4>Manual photo upload</h4>
+            <h4>Manual file upload</h4>
 
-            <p> Enter SET (ex: A)
+            <p>* If this is a clue, please name it according to convention. Example: <code>SET: A</code> <code>NUMBER: 55</code><br>
+               * If this is a different kind of file use <b><u>BOTH boxes</u></b>
+                to name the file something descriptive. Example: <code>SET: crafts</code> <code>NUMBER: list</code>  </p>
+
+            <!--<p> Enter first field.-->
                 <input type="text"
                        class="form-control"
-                       placeholder="Set"
+                       placeholder="Set/First Name"
                        ng-model="setNo"/></p>
             <!--Input Clue Number and choose which set it belongs to-->
-            <p>Enter Clue Number (ex. 55)
+            <!--<p>Enter second field.-->
                 <input type="text"
                        class="form-control"
-                       placeholder="Clue Number"
+                       placeholder="Clue Number/Second Name"
                        ng-model="number"/>
             </p>
             <a ng-click="model.markComplete(clue)" href="#!/submit/{{setNo}}/{{number}}" class="btn btn-primary">MANUAL UPLOAD</a>
+
+            <br><br><br><br>
+            [RADIO BUTTONS TO CHANGE TEAMS.]
 
 
         </div>

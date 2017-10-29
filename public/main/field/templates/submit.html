@@ -4,11 +4,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <h1>Submit Completed Clue {{model.setNumber}} {{model.clueNumber}}</h1>
+            <h1>Submit File for <code>{{model.setNumber}} {{model.clueNumber}}</code></h1>
+
             <a href="#!/home" class="btn btn-primary">Home</a><br><br>
-            Note: By reaching this page, clue {{model.setNumber}}{{model.clueNumber}} has already been marked as <strong>COMPLETE</strong>,
-            and is no longer a task for your field team. <br>
-            If this was a mistake, you can go <a href="#!/completedTasks">HERE</a> and un-complete the task (WIP).<br>
+            Congratulations for completing this task!  Please click the upload button to select your file and
+            <u>wait</u> on this page until your upload is confirmed.
+            <br><br>
+            Note: By reaching this page, clue <code>{{model.setNumber}}{{model.clueNumber}}</code>
+            has been marked as <strong><u>COMPLETE</u></strong>, and has been removed from your list of tasks! <br>
+            If this was a mistake, you can go <a href="#!/completedTasks">HERE</a> and un-complete the task.<br>
 
             <br>
          <!--   <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
