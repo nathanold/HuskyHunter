@@ -6,19 +6,19 @@
             <h4>Welcome, {{model.currentUser.firstName}}.  You are currently assigned to {{model.currentUser.roles}}</h4>.
             <br>
 
-            <div ng-if="model.isHQ()"><a href="#!/addClue" class="btn btn-warning btn-block">Add A New Clue</a>
+            <div ng-if="model.isHQ() || model.isAdmin()"><a href="#!/addClue" class="btn btn-warning btn-block">Add A New Clue</a>
                 <br/></div>
 
-            <div ng-if="model.isTeam1()"><a href="#!/field1" class="btn btn-primary btn-block">Field Team 1</a><br/>
+            <div ng-if="model.isTeam1() || model.isAdmin()"><a href="#!/field1" class="btn btn-primary btn-block">Field Team 1</a><br/>
             </div>
 
-            <div ng-if="model.isTeam2()"><a href="#!/field2" class="btn btn-primary btn-block">Field Team 2</a><br/>
+            <div ng-if="model.isTeam2() || model.isAdmin()"><a href="#!/field2" class="btn btn-primary btn-block">Field Team 2</a><br/>
             </div>
 
-            <div ng-if="model.isTeam3()"><a href="#!/field3" class="btn btn-primary btn-block">Field Team 3</a><br/>
+            <div ng-if="model.isTeam3() || model.isAdmin()"><a href="#!/field3" class="btn btn-primary btn-block">Field Team 3</a><br/>
             </div>
 
-            <div ng-if="model.isHQ()"><a href="#!/unassigned" class="btn btn-primary btn-block">Unassigned
+            <div ng-if="model.isHQ()  || model.isAdmin()"><a href="#!/unassigned" class="btn btn-primary btn-block">Unassigned
                 Tasks</a><br/>
             </div>
 
