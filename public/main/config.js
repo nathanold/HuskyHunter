@@ -42,6 +42,14 @@
                     currentUser: checkLoggedIn
                 }
             })
+            .when('/teammates', {
+                templateUrl: 'teammates.html',
+                controller: 'homeController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
             .when('/field1', {
                 templateUrl: 'field/templates/field-team-1.html',
                 controller: 'controlController',
