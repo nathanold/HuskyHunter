@@ -35,10 +35,10 @@
                         Address
                     </th>
                     <th>
-                        Description <!--Distance to current location-->
+                        Actions
                     </th>
                     <th>
-                        Actions
+                        Description <!--Distance to current location-->
                     </th>
                 </tr>
                 </thead>
@@ -59,12 +59,13 @@
                     </th>
                     <th>
                         <!--&lt;!&ndash;0.7 miles&ndash;&gt;-->
-                        {{clue.additionalNotes}}
+                        <a ng-click="model.markComplete(clue)" href="#!/submit/{{clue.setNo}}/{{clue.number}}">[COMPLETE] </a>
+
                     </th>
 
                     <th>
 
-                        <a ng-click="model.markComplete(clue)" href="#!/submit/{{clue.setNo}}/{{clue.number}}">[COMPLETE] </a>
+                        {{clue.additionalNotes}}
 
                         </a>
 
