@@ -15,26 +15,16 @@
 <br>
             <h4>Manual file upload</h4>
 
-            <p>* If this is a clue, please name it according to convention.
-                <br><strong>Example:</strong> <code>SET: A</code> <code>NUMBER: 55</code>
-                <br><br>
-               * If this is a different kind of file use <b><u>BOTH boxes</u></b>
-                to name the file something descriptive.
-                <br><strong>Example:</strong> <code>SET: crafts</code> <code>NUMBER: list</code>  </p>
-
-            <!--<p> Enter first field.-->
-                <input type="text"
-                       class="form-control"
-                       placeholder="Set/First Name"
-                       ng-model="setNo"/></p>
+            <p>Please write a <u>descriptive and unique</u> name for this upload.<br><br>
+                Your file will <b>NOT</b> be uploaded if the name overlaps with a file previously uploaded!</p>
             <!--Input Clue Number and choose which set it belongs to-->
             <!--<p>Enter second field.-->
                 <input type="text"
                        class="form-control"
-                       placeholder="Clue Number/Second Name"
+                       placeholder="Name of File"
                        ng-model="number"/>
             </p>
-            <a ng-click="model.markComplete(clue)" href="#!/submit/{{setNo}}/{{number}}" class="btn btn-primary">MANUAL UPLOAD</a>
+            <a ng-click="model.markComplete(clue)" href="#!/submit/ManualUpload_/{{number}}" class="btn btn-primary">MANUAL UPLOAD</a>
 
             <br><br><br><br>
             [RADIO BUTTONS TO CHANGE TEAMS.]
