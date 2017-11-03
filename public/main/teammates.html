@@ -15,155 +15,16 @@
                 </h4> This is a list of all the active players on our team!
             </div>
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        Active Team
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>
-                        Josh Spicer
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                        </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Nathan Oldakowski
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Aparna Dutta
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Anuj Modi
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Sanjukta Dutta
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Angelo Martinelli
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Chris Gomes
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Julia Connolly
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Carter Tune
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Becca McBrayer
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Stacy Andryshak
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Casey Paxton
-                    </th>
-                    <th>
-                        ???
-                    </th>
-                    </a>
-
-                    </th>
-                </tr>
-
-                </tbody>
-            </table>
         </div>
 
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4 " ng-repeat="article in model.teams">
+            <h4>{{article.firstName}} {{article.lastName}}: {{article.roles[0]}}</h4>
+            <br>
+
+        </div>
     </div>
 
 

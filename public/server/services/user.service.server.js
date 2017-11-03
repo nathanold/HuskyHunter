@@ -16,6 +16,8 @@ app.get('/api/user/:userId', findUserById);
 app.post('/api/login', passport.authenticate('local'), login);
 app.get('/api/checkLoggedIn', checkLoggedIn);
 app.get('/api/checkAdmin', checkAdmin);
+app.put("/api/user/:role", changeRole);
+
 
 app.post('/api/logout', logout);
 
@@ -62,6 +64,7 @@ function findUserByCredentials(req, res) {
             res.send(err);
         });
 }
+
 
 function findUserByUsername(req, res) {
     var username = req.params.username;
@@ -131,4 +134,19 @@ function checkAdmin(req, res) {
     else {
         res.send('0');
     }
+}
+
+function changeRole(req, res) {
+    console.log('changing role');
+    var user = req.body;
+    var role = req.params.role;
+    userModel
+        .changeRole(role, user)
+        .then(function (user) {
+            res.json(user);
+        }, function (err) {
+            console.log('an error occurred');
+            res.send(err);
+        });
+
 }

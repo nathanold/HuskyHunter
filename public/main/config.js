@@ -44,7 +44,7 @@
             })
             .when('/teammates', {
                 templateUrl: 'teammates.html',
-                controller: 'homeController',
+                controller: 'teamController',
                 controllerAs: 'model',
                 resolve: {
                     currentUser: checkLoggedIn

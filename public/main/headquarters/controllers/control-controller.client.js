@@ -8,6 +8,7 @@
         model.sets = "OK";
         model.selectedRole = currentUser.roles[0];
         model.roles = ["TEAM1", "TEAM2", "TEAM3", "HQ"];
+        model.user = currentUser;
         function init() {
             console.log('finding all clues');
             controlService
@@ -70,16 +71,16 @@
                 })
         };
 
-        model.changeRole = function (newRole) {
-            userService.changeRole(newRole)
+        model.changeRole = function (user) {
+            var e = document.getElementById("changeTeam");
+            var strUser = e.options[e.selectedIndex].text;
+            console.log("controller user: " + user);
+            userService
+                .changeRole(user, strUser)
                 .then(function () {
-                        $location.url('/home');
-                    },
-                    function (err) {
-                        console.log(err);
-                    });
-
-        };
+                    $location.url('/home')
+                });
+        }
 
     }
 })();

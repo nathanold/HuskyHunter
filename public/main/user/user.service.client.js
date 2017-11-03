@@ -43,9 +43,10 @@
                 });
         }
 
-        function changeRole() {
-            var url = "/api/role/";
-            return $http.get(url)
+        function changeRole(user, role){
+            var url = "/api/user/" + role;
+            console.log(url);
+            return $http.put(url, user)
                 .then(function (response) {
                     return response.data;
                 });
