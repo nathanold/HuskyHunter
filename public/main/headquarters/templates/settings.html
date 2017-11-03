@@ -1,43 +1,43 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
 
-<h1>Settings Panel</h1>
-<a href="#!/home" class="btn btn-primary">Home</a>
-<br>
-<br>
-<!--Section for additional options that headquarters center will have to be able to do-->
-            <!--<h4>Google Drive upload for random files</h4>-->
-            <!--<code><strong>Username:</strong> huskyhunter2017@gmail.com | <strong>Password:</strong> (what was on our shirts last year) x2</code><br>-->
-            <!--<a href="https://script.google.com/macros/s/AKfycbwTffz1IOjXvIX4kxO7qYPgLwqe_2PCscR0QSf1mX0/dev"-->
-               <!--class="btn btn-primary">DRIVE Upload</a>-->
-            <!--<a href="https://drive.google.com/drive/folders/0BxqQbTn6xXzeRERtZGRtZm54bU0?usp=sharing"> see folder</a><br>-->
-<br>
-            <h4>Manual file upload</h4>
+    <h1>Settings Panel</h1>
+    <a href="#!/home" class="btn btn-primary">Home</a>
+    <br>
+    <br>
+    <!--Section for additional options that headquarters center will have to be able to do-->
+    <!--<h4>Google Drive upload for random files</h4>-->
+    <!--<code><strong>Username:</strong> huskyhunter2017@gmail.com | <strong>Password:</strong> (what was on our shirts last year) x2</code><br>-->
+    <!--<a href="https://script.google.com/macros/s/AKfycbwTffz1IOjXvIX4kxO7qYPgLwqe_2PCscR0QSf1mX0/dev"-->
+    <!--class="btn btn-primary">DRIVE Upload</a>-->
+    <!--<a href="https://drive.google.com/drive/folders/0BxqQbTn6xXzeRERtZGRtZm54bU0?usp=sharing"> see folder</a><br>-->
+    <br>
+    <h4>Manual file upload</h4>
 
-            <p>* If this is a clue, please name it according to convention. Example: <code>SET: A</code> <code>NUMBER: 55</code><br>
-               * If this is a different kind of file use <b><u>BOTH boxes</u></b>
-                to name the file something descriptive. Example: <code>SET: crafts</code> <code>NUMBER: list</code>  </p>
+    <p>* If this is a clue, please name it according to convention. Example: <code>SET: A</code> <code>NUMBER:
+        55</code><br>
+        * If this is a different kind of file use <b><u>BOTH boxes</u></b>
+        to name the file something descriptive. Example: <code>SET: crafts</code> <code>NUMBER: list</code></p>
 
-            <!--<p> Enter first field.-->
-                <input type="text"
-                       class="form-control"
-                       placeholder="Set/First Name"
-                       ng-model="setNo"/></p>
-            <!--Input Clue Number and choose which set it belongs to-->
-            <!--<p>Enter second field.-->
-                <input type="text"
-                       class="form-control"
-                       placeholder="Clue Number/Second Name"
-                       ng-model="number"/>
-            </p>
-            <a ng-click="model.markComplete(clue)" href="#!/submit/{{setNo}}/{{number}}" class="btn btn-primary">MANUAL UPLOAD</a>
+    <!--<p> Enter first field.-->
+    <input type="text"
+           class="form-control"
+           placeholder="Set/First Name"
+           ng-model="setNo"/></p>
+    <!--Input Clue Number and choose which set it belongs to-->
+    <!--<p>Enter second field.-->
+    <input type="text"
+           class="form-control"
+           placeholder="Clue Number/Second Name"
+           ng-model="number"/>
+    </p>
+    <a ng-click="model.markComplete(clue)" href="#!/submit/{{setNo}}/{{number}}" class="btn btn-primary">MANUAL
+        UPLOAD</a>
 
-            <br><br><br><br>
-            [RADIO BUTTONS TO CHANGE TEAMS.]
+    <br><br><br><br>
+    [RADIO BUTTONS TO CHANGE TEAMS.]
+    <select ng-model="selectedRole" ng-options="x for x in roles">
+    </select>
 
-
-        </div>
-    </div></div>
+</div>
 
 

@@ -7,7 +7,7 @@
             <h1>Submit File for <code>{{model.setNumber}} {{model.clueNumber}}</code></h1>
 
             <a href="#!/home" class="btn btn-primary">Home</a><br><br>
-            Congratulations for completing this task!  Please click the upload button to select your file and
+            Congratulations for completing this task! Please click the upload button to select your file and
             <u>wait</u> on this page until your upload is confirmed.
             <br><br>
             Note: By reaching this page, clue <code>{{model.setNumber}}{{model.clueNumber}}</code>
@@ -16,25 +16,24 @@
             If this was a mistake, contact Josh or Nathan!
 
             <br>
-         <!--   <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
-                <input name="myFile" type="file" class="form-control"/>
-                <br/>
-                <button type="submit" class="btn btn-block btn-primary">Submit Completed Clue</button>
-            </form>
--->
+            <!--   <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
+                   <input name="myFile" type="file" class="form-control"/>
+                   <br/>
+                   <button type="submit" class="btn btn-block btn-primary">Submit Completed Clue</button>
+               </form>
+   -->
         </div>
     </div>
 </div>
 <section class="container main">
     <form ng-submit="model.uploadFile()">
-        <input type="file" id="file-upload" />
+        <input type="file" id="file-upload"/>
         <button type="submit">Submit</button>
     </form>
 
     <!-- A place to show the status of the upload -->
     <h2 id="results"></h2>
 </section>
-
 
 
 </html>

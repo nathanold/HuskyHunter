@@ -3,9 +3,11 @@
         .module('huskyhunter')
         .controller('controlController', controlController);
 
-    function controlController($routeParams, controlService, $location, $scope) {
+    function controlController($routeParams, controlService, $location, $scope, userService, currentUser) {
         var model = this;
         model.sets = "OK";
+        model.selectedRole = currentUser.roles[0];
+        model.roles = ["TEAM1", "TEAM2", "TEAM3", "HQ"];
         function init() {
             console.log('finding all clues');
             controlService
@@ -20,7 +22,7 @@
 
         init();
 
-        model.submitClue = function(number, setNo, mapData, locationName, additionalNotes, assignedTo){
+        model.submitClue = function (number, setNo, mapData, locationName, additionalNotes, assignedTo) {
             var clue = {
                 number: number,
                 setNo: setNo,
@@ -34,18 +36,18 @@
             console.log("clue: " + clue);
             controlService
                 .submitClue(clue)
-                .then(function(){
-                    $location.url('/home');
-                },
-                function(err){
-                    console.log(err);
-                });
+                .then(function () {
+                        $location.url('/home');
+                    },
+                    function (err) {
+                        console.log(err);
+                    });
 
             model.result = clue;
             //$scope.arr.push(clue);
         };
 
-        model.deleteClue = function(clueId){
+        model.deleteClue = function (clueId) {
             console.log('delete clue');
             controlService.deleteClue(clueId)
                 .then(function () {
@@ -53,20 +55,31 @@
                 })
         };
 
-        model.updateClue = function(clue){
+        model.updateClue = function (clue) {
             controlService.updateClue(clue)
-                .then(function(){
+                .then(function () {
                     location.reload();
                 })
         };
 
-        model.markComplete = function(clue){
-            console.log('marking '+clue._id+ " complete");
+        model.markComplete = function (clue) {
+            console.log('marking ' + clue._id + " complete");
             controlService.markComplete(clue)
-                .then(function(){
+                .then(function () {
                     location.reload();
                 })
-        }
+        };
+
+        model.changeRole = function (newRole) {
+            userService.changeRole(newRole)
+                .then(function () {
+                        $location.url('/home');
+                    },
+                    function (err) {
+                        console.log(err);
+                    });
+
+        };
 
     }
 })();

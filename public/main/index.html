@@ -7,46 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
-    <script type='text/javascript'>
-        var map, baseLayer, drawingManager;
 
-        function GetMap() {
-            map = new Microsoft.Maps.Map('#myMap', {
-                credentials: 'YourBingMapsKey'
-            });
-
-            //Load the DrawingTools module
-            Microsoft.Maps.loadModule('Microsoft.Maps.DrawingTools', function () {
-                //Create a base layer to add drawn shapes.
-                baseLayer = new Microsoft.Maps.Layer();
-                map.layers.insert(baseLayer);
-
-                //Create an instance of the DrawingTools class and bind it to the map.
-                var tools = new Microsoft.Maps.DrawingTools(map);
-
-                //Show the drawing toolbar and enable editting on the map.
-                tools.showDrawingManager(function (manager) {
-                    drawingManager = manager;
-
-                    Microsoft.Maps.Events.addHandler(drawingManager, 'drawingEnded', function (e) {
-                        //When use finisihes drawing a shape, removing it from the drawing layer and add it to the base layer.
-                        var shapes = drawingManager.getPrimitives();
-
-                        if (shapes) {
-                            drawingManager.clear();
-                            baseLayer.add(shapes);
-                        }
-                    });
-
-                    Microsoft.Maps.Events.addHandler(drawingManager, 'drawingChanging', function (e) {
-                        //When the drawing is changing, clear the base layer.
-                        baseLayer.clear();
-                    });
-                })
-            });
-        }
-    </script>
-    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"

@@ -5,8 +5,8 @@
 
     function userService($http) {
         var api = {
-
             findUserById: findUserById,
+            changeRole: changeRole,
             findUserByCredentials: findUserByCredentials,
             findUserByUsername: findUserByUsername,
             findAllUsers: findAllUsers,
@@ -43,7 +43,13 @@
                 });
         }
 
-
+        function changeRole() {
+            var url = "/api/role/";
+            return $http.get(url)
+                .then(function (response) {
+                    return response.data;
+                });
+        }
 
         function findUserByUsername(username) {
             var url = '/api/user/username/' + username;
