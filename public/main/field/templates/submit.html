@@ -4,17 +4,22 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <h1>Submit File for <code>{{model.setNumber}} {{model.clueNumber}}</code></h1>
+            <h1>Submit File for <code>{{model.setNumber}}{{model.clueNumber}}</code></h1>
 
             <a href="#!/home" class="btn btn-primary">Home</a><br><br>
+<<<<<<< HEAD
             Congratulations for completing this task! Please click the upload button to select your file and
             <u>wait</u> on this page until your upload is confirmed.
+=======
+            Congratulations for completing this task!  <br>Please click the upload button to select your file and
+            <u>wait</u> on this page until "upload complete" appears next to <code>status</code>.
+>>>>>>> d2f72ed431b5edaaad0f10ba61770e4b66338574
             <br><br>
-            Note: By reaching this page, clue <code>{{model.setNumber}}{{model.clueNumber}}</code>
-            has been marked as <strong><u>COMPLETE</u></strong>, and has been removed from your list of tasks! <br>
+            <code>{{model.setNumber}}{{model.clueNumber}}</code>
+            has been marked as <strong><u>complete</u></strong>
+            and has been <strong><u>removed</u></strong> from your list of tasks. <br> [Contact HQ is this was a mistake.]
             <!--If this was a mistake, you can go <a href="#!/completedTasks">HERE</a> and un-complete the task.<br>-->
-            If this was a mistake, contact Josh or Nathan!
-
+            <br>
             <br>
             <!--   <form action="{{model.apiUrl}}" method="post" enctype="multipart/form-data">
                    <input name="myFile" type="file" class="form-control"/>
@@ -32,6 +37,7 @@
     </form>
 
     <!-- A place to show the status of the upload -->
+    <br> <code>Status:</code>
     <h2 id="results"></h2>
 </section>
 
