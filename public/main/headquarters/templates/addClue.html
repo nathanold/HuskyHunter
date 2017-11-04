@@ -38,12 +38,14 @@
             Choose which field team to assign this to. <br>
             <label class="radio-inline"><input type="radio" value="0" ng-model="assignedTo"
                                                name="optradio">Unassigned</label>
-            <label class="radio-inline"><input type="radio" value="1" ng-model="assignedTo" name="optradio">Team
-                1</label>
-            <label class="radio-inline"><input type="radio" value="2" ng-model="assignedTo" name="optradio">Team
-                2</label>
-            <label class="radio-inline"><input type="radio" value="3" ng-model="assignedTo" name="optradio">Team
-                3</label>
+            <label class="radio-inline"><input type="radio" value="1" ng-model="assignedTo" name="optradio">Fenway</label>
+            <label class="radio-inline"><input type="radio" value="2" ng-model="assignedTo" name="optradio">Cambridge</label>
+            <label class="radio-inline"><input type="radio" value="3" ng-model="assignedTo" name="optradio">Downtown/Commons</label>
+            <label class="radio-inline"><input type="radio" value="4" ng-model="assignedTo" name="optradio">Southie/Dorchester</label>
+            <label class="radio-inline"><input type="radio" value="5" ng-model="assignedTo" name="optradio">North End</label>
+            <label class="radio-inline"><input type="radio" value="6" ng-model="assignedTo" name="optradio">Jamaica Plains</label>
+            <label class="radio-inline"><input type="radio" value="7" ng-model="assignedTo" name="optradio">South End</label>
+            <label class="radio-inline"><input type="radio" value="8" ng-model="assignedTo" name="optradio">Northeastern/Back Bay</label>
             <br>
             <!--Button to submit clue to Database-->
             <a ng-click="model.submitClue(number, setNo, mapData, locationName, additionalNotes, assignedTo)"

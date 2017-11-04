@@ -74,6 +74,46 @@
                     currentUser: checkLoggedIn
                 }
             })
+            .when('/field4', {
+                templateUrl: 'field/templates/field-team-4.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/field5', {
+                templateUrl: 'field/templates/field-team-5.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/field6', {
+                templateUrl: 'field/templates/field-team-6.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/field7', {
+                templateUrl: 'field/templates/field-team-7.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
+            .when('/field8', {
+                templateUrl: 'field/templates/field-team-8.html',
+                controller: 'controlController',
+                controllerAs: 'model',
+                resolve: {
+                    currentUser: checkLoggedIn
+                }
+            })
             .when('/unassigned', {
                 templateUrl: 'field/templates/unassigned.html',
                 controller: 'controlController',
