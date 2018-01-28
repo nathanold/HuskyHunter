@@ -6,7 +6,11 @@ Provides a centralized point of data organization and clue completion.  Dropbox 
 <p> The app is hosted at <code>http://huskyhunter.herokuapp.com</code> </p>
 
 <p>
-  <img src="IMG_8167.PNG" width="350"/>
+  <img src="screenshots/homepage.png" width="700"/>
+</p>
+<br><br>
+<p>
+  <img src="screenshots/fieldteam.png" width="700"/>
 </p>
 
 <br>
